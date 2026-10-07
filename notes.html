@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>学习笔记 | Jingliang Huai</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-text">Jingliang Huai</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="about.html" class="nav-link">关于我</a></li>
+        <li><a href="publications.html" class="nav-link">论文发表</a></li>
+        <li><a href="research.html" class="nav-link">工作论文</a></li>
+        <li><a href="notes.html" class="nav-link active">学习笔记</a></li>
+        <li><a href="cv.html" class="nav-link">简历</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="切换主题"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>学习笔记</h1>
+      <p class="page-subtitle">Study Notes & Paper Reading</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notes-categories">
+        <button class="cat-btn active" data-cat="all">全部</button>
+        <button class="cat-btn" data-cat="probability">概率论</button>
+        <button class="cat-btn" data-cat="papers">论文精读</button>
+        <button class="cat-btn" data-cat="method">方法论</button>
+        <button class="cat-btn" data-cat="fl">联邦学习</button>
+      </div>
+
+      <div class="notes-list" id="notesList">
+
+        <!-- Note 1 -->
+        <article class="note-entry" data-category="probability" id="resnick">
+          <div class="note-entry-header">
+            <span class="note-category-tag probability">概率论</span>
+            <span class="note-date">2026-09</span>
+          </div>
+          <h3>Resnick《A Probability Path》集合极限笔记</h3>
+          <p>本章聚焦 set limits（集合论极限）的核心概念，包括 limsup、liminf、Kuratowski 收敛等，是理解测度论中单调类定理和 Dynkin π-λ 引理的基础。</p>
+          <div class="note-entry-footer">
+            <span class="note-status">📖 习题推进中</span>
+            <span class="note-topics">
+              <span class="topic-tag">集合极限</span>
+              <span class="topic-tag">测度论</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Note 2 -->
+        <article class="note-entry" data-category="papers" id="beh2026">
+          <div class="note-entry-header">
+            <span class="note-category-tag papers">论文精读</span>
+            <span class="note-date">2026-09</span>
+          </div>
+          <h3>Bevilacqua, Ellington & Hizmeri (2026) 精读</h3>
+          <p>精读 BEH (2026) 关于 connectedness 的最新前沿成果，分析其方法论架构、波动率模型选择与溢出指数构造的创新点。为公众号"论文精读"类推文积累素材。</p>
+          <div class="note-entry-footer">
+            <span class="note-status">✅ 精读完成</span>
+            <span class="note-topics">
+              <span class="topic-tag">Connectedness</span>
+              <span class="topic-tag">DY Spillover</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Note 3 -->
+        <article class="note-entry" data-category="papers" id="conformal">
+          <div class="note-entry-header">
+            <span class="note-category-tag papers">论文精读</span>
+            <span class="note-date">2026-09</span>
+          </div>
+          <h3>Lei et al. (JASA 2018) — Distribution-Free Predictive Inference</h3>
+          <p>精读这篇 conformal prediction 的经典方法论论文，理解 split conformal、jackknife+ 等核心方法。重点思考如何将分布无关预测推断框架适配到时间序列场景，为 DY connectedness 构建置信区间。</p>
+          <div class="note-entry-footer">
+            <span class="note-status">🔍 精读中</span>
+            <span class="note-topics">
+              <span class="topic-tag">Conformal Prediction</span>
+              <span class="topic-tag">时间序列</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Note 4 -->
+        <article class="note-entry" data-category="method">
+          <div class="note-entry-header">
+            <span class="note-category-tag method">方法论</span>
+            <span class="note-date">2026-08</span>
+          </div>
+          <h3>BEKK-GARCH 参数估计：QMLE vs. 其他方法</h3>
+          <p>系统梳理 BEKK-GARCH 模型的参数估计方法，比较 QMLE、MLE、GMM 等不同估计量在有限样本下的表现差异，重点关注高维约束下的估计效率问题。</p>
+          <div class="note-entry-footer">
+            <span class="note-status">📝 整理中</span>
+            <span class="note-topics">
+              <span class="topic-tag">BEKK-GARCH</span>
+              <span class="topic-tag">QMLE</span>
+              <span class="topic-tag">高维估计</span>
+            </span>
+          </div>
+        </article>
+
+        <!-- Note 5 -->
+        <article class="note-entry" data-category="fl" id="fl">
+          <div class="note-entry-header">
+            <span class="note-category-tag fl">联邦学习</span>
+            <span class="note-date">2026-08</span>
+          </div>
+          <h3>联邦学习 + 时间序列: 方法论调研</h3>
+          <p>调研联邦学习框架在时间序列建模领域的最新进展，评估 FedAvg、FedProx 等聚合策略在波动率建模中的适用性，以及差分隐私等隐私保护机制的计量经济学实现路径。</p>
+          <div class="note-entry-footer">
+            <span class="note-status">🔍 调研中</span>
+            <span class="note-topics">
+              <span class="topic-tag">Federated Learning</span>
+              <span class="topic-tag">PIPL</span>
+            </span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2025-present Jingliang Huai. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Jingliang-Huai" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:huaijl1230@163.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

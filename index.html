@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jingliang Huai - 个人学术主页 / Personal Academic Website">
+  <title>Jingliang Huai | 个人学术主页</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-text">Jingliang Huai</span>
+      </a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link active">首页</a></li>
+        <li><a href="about.html" class="nav-link">关于我</a></li>
+        <li><a href="publications.html" class="nav-link">论文发表</a></li>
+        <li><a href="research.html" class="nav-link">工作论文</a></li>
+        <li><a href="notes.html" class="nav-link">学习笔记</a></li>
+        <li><a href="cv.html" class="nav-link">简历</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="hero-particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="images/avatar-placeholder.svg" alt="Jingliang Huai" id="avatarImg">
+      </div>
+      <h1 class="hero-name">Jingliang Huai</h1>
+      <p class="hero-title">经济学/统计学博士生 · 计量经济学研究者</p>
+      <p class="hero-subtitle">多元波动率建模 | BEKK-GARCH | 金融计量经济学</p>
+      <div class="hero-social">
+        <a href="https://github.com/Jingliang-Huai" target="_blank" class="social-link" title="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank" class="social-link" title="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a href="mailto:huaijl1230@163.com" class="social-link" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="#" target="_blank" class="social-link" title="ResearchGate">
+          <i class="fab fa-researchgate"></i>
+        </a>
+        <a href="#" target="_blank" class="social-link" title="ORCID">
+          <i class="fab fa-orcid"></i>
+        </a>
+      </div>
+      <div class="hero-cta">
+        <a href="about.html" class="btn btn-primary">了解更多 <i class="fas fa-arrow-right"></i></a>
+        <a href="cv.html" class="btn btn-outline">查看简历 <i class="fas fa-file-pdf"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>向下滚动</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== LATEST NEWS ========== -->
+  <section class="section" id="news">
+    <div class="container">
+      <h2 class="section-title"><span class="title-deco"></span>最新动态</h2>
+      <div class="news-timeline">
+        <div class="news-item">
+          <div class="news-date">2026-10</div>
+          <div class="news-content">
+            <p>论文 <strong>"State-Weighted QMLE for BEKK-GARCH: A Unified Framework"</strong> 方法学构建完成，进入实证验证阶段。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2026-09</div>
+          <div class="news-content">
+            <p>启动 <strong>conformal prediction + DY connectedness</strong> 融合课题，为 connectedness 指数构造置信区间。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025</div>
+          <div class="news-content">
+            <p>独作论文 <strong>"Extreme-BEKK-GARCH"</strong> 发表于 <em>Computational Economics</em> (Springer)。</p>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">2025</div>
+          <div class="news-content">
+            <p>启动联邦学习 + BEKK-GARCH 支线研究，聚焦 PIPL 合规下的隐私保护型波动率建模。</p>
+          </div>
+        </div>
+      </div>
+      <p class="section-more"><a href="about.html">查看完整履历 <i class="fas fa-long-arrow-alt-right"></i></a></p>
+    </div>
+  </section>
+
+  <!-- ========== RESEARCH INTERESTS ========== -->
+  <section class="section section-alt" id="research">
+    <div class="container">
+      <h2 class="section-title"><span class="title-deco"></span>研究方向</h2>
+      <div class="research-grid">
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>多元波动率建模</h3>
+          <p>Multivariate volatility models — BEKK-GARCH 框架的参数估计、模型选择与预测评估。</p>
+        </div>
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-cogs"></i></div>
+          <h3>高维统计推断</h3>
+          <p>High-dimensional statistical inference — QMLE 渐近理论、状态加权估计与模型平均。</p>
+        </div>
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-project-diagram"></i></div>
+          <h3>金融网络与连通性</h3>
+          <p>Financial connectedness — DY 溢出指数框架下的风险传导与置信区间构造。</p>
+        </div>
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>联邦学习与隐私计量</h3>
+          <p>Federated learning for econometrics — PIPL 合规下分布式波动率建模可行性方案。</p>
+        </div>
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-robot"></i></div>
+          <h3>预测推断</h3>
+          <p>Conformal prediction — 分布无关的预测推断在时间序列模型中的应用延伸。</p>
+        </div>
+        <div class="research-card">
+          <div class="card-icon"><i class="fas fa-calculator"></i></div>
+          <h3>计量经济学理论</h3>
+          <p>Econometric theory — QMLE、GMM、集合极限理论及其在金融数据中的应用。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURED PUBLICATIONS ========== -->
+  <section class="section" id="publications">
+    <div class="container">
+      <h2 class="section-title"><span class="title-deco"></span>代表论文</h2>
+      <div class="pub-list">
+        <div class="pub-item">
+          <div class="pub-year">2025</div>
+          <div class="pub-info">
+            <h3 class="pub-title">Extreme-BEKK-GARCH</h3>
+            <p class="pub-authors"><strong>Huai, J.</strong></p>
+            <p class="pub-journal"><em>Computational Economics</em>, Springer</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> PDF</a>
+              <a href="https://github.com/Jingliang-Huai" class="pub-link"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year working">Working</div>
+          <div class="pub-info">
+            <h3 class="pub-title">State-Weighted QMLE for BEKK-GARCH: A Unified Framework</h3>
+            <p class="pub-authors"><strong>Huai, J.</strong></p>
+            <p class="pub-journal">Targeting: <em>JRSSB / JASA / AoS / Biometrika</em></p>
+            <div class="pub-links">
+              <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Draft</a>
+            </div>
+          </div>
+        </div>
+        <div class="pub-item">
+          <div class="pub-year working">Working</div>
+          <div class="pub-info">
+            <h3 class="pub-title">Conformal Prediction for DY Connectedness: Distribution-Free Confidence Intervals</h3>
+            <p class="pub-authors"><strong>Huai, J.</strong></p>
+            <p class="pub-journal">Working paper</p>
+            <div class="pub-links">
+              <a href="#" class="pub-link"><i class="fas fa-file-pdf"></i> Draft</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="section-more"><a href="publications.html">查看全部论文 <i class="fas fa-long-arrow-alt-right"></i></a></p>
+    </div>
+  </section>
+
+  <!-- ========== LEARNING NOTES ========== -->
+  <section class="section section-alt" id="notes">
+    <div class="container">
+      <h2 class="section-title"><span class="title-deco"></span>学习笔记</h2>
+      <div class="notes-grid">
+        <a href="notes.html#resnick" class="note-card">
+          <div class="note-icon"><i class="fas fa-book-open"></i></div>
+          <h3>概率论基础</h3>
+          <p>Resnick《A Probability Path》习题笔记 — 集合极限与测度论基础</p>
+          <span class="note-tag">进行中</span>
+        </a>
+        <a href="notes.html#beh2026" class="note-card">
+          <div class="note-icon"><i class="fas fa-newspaper"></i></div>
+          <h3>论文精读</h3>
+          <p>Bevilacqua, Ellington & Hizmeri (2026) — Connectedness 前沿文献深度解析</p>
+          <span class="note-tag">最新</span>
+        </a>
+        <a href="notes.html#conformal" class="note-card">
+          <div class="note-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3>预测推断</h3>
+          <p>Lei et al. (JASA 2018) — Distribution-Free Predictive Inference 精读笔记</p>
+          <span class="note-tag">精读中</span>
+        </a>
+        <a href="notes.html#fl" class="note-card">
+          <div class="note-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>联邦学习</h3>
+          <p>Federated Learning + BEKK-GARCH 方法调研与隐私保护计量经济学探索</p>
+          <span class="note-tag">调研中</span>
+        </a>
+      </div>
+      <p class="section-more"><a href="notes.html">查看全部笔记 <i class="fas fa-long-arrow-alt-right"></i></a></p>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2025-present Jingliang Huai. All rights reserved.</p>
+          <p class="footer-powered">Built with <i class="fas fa-heart"></i> for academic research</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Jingliang-Huai" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:huaijl1230@163.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" target="_blank"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+      </div>
+      <div class="footer-counter">
+        <span id="visitCounter"><i class="fas fa-eye"></i> 总访问次数: <span id="countNum">0</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

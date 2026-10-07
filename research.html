@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>工作论文 | Jingliang Huai</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-text">Jingliang Huai</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="about.html" class="nav-link">关于我</a></li>
+        <li><a href="publications.html" class="nav-link">论文发表</a></li>
+        <li><a href="research.html" class="nav-link active">工作论文</a></li>
+        <li><a href="notes.html" class="nav-link">学习笔记</a></li>
+        <li><a href="cv.html" class="nav-link">简历</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="切换主题"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>研究项目</h1>
+      <p class="page-subtitle">Research Projects</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Project 1: State-Weighted -->
+      <div class="project-card" id="sw-bekk">
+        <div class="project-header">
+          <span class="project-status active">进行中</span>
+          <h2>State-Weighted QMLE for BEKK-GARCH: A Unified Framework</h2>
+        </div>
+        <div class="project-meta">
+          <span><i class="fas fa-tag"></i> 多元波动率建模 · QMLE 理论</span>
+          <span><i class="fas fa-flag"></i> 目标期刊: JRSSB / JASA / AoS / Biometrika</span>
+        </div>
+        <div class="project-content">
+          <h3>动机</h3>
+          <p>传统 BEKK-GARCH 的 QMLE 在不同波动体制（高波动/低波动）下表现出显著的效率差异。现有方法大多采用"硬切换"机制，信息利用不充分。</p>
+          
+          <h3>方法</h3>
+          <p>提出<strong>状态加权（State-Weighted）</strong> QMLE 方法，将不同波动状态下的估计信息通过数据驱动权重进行"软"融合，构建统一的参数估计框架。该方法不需要事先划分状态区间，权重由数据自适应决定。</p>
+          
+          <h3>进展</h3>
+          <ul>
+            <li>Phase 1 ✅ 理论构建 — 加权似然函数设计完成</li>
+            <li>Phase 2 ✅ 方法定位 — 与现有方法的理论对比明确</li>
+            <li>Phase 3 ✅ MC 模拟 — 有限样本性质验证通过</li>
+            <li>Phase 4 ✅ 实证验证 — SP500 + WTI 数据验证完成</li>
+            <li>当前: 论文命名与叙事重构，向顶刊级稿件收束</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 2: CP + DY -->
+      <div class="project-card" id="cp-dy">
+        <div class="project-header">
+          <span class="project-status active">进行中</span>
+          <h2>Conformal Prediction for DY Connectedness</h2>
+        </div>
+        <div class="project-meta">
+          <span><i class="fas fa-tag"></i> 预测推断 · 金融网络</span>
+        </div>
+        <div class="project-content">
+          <h3>动机</h3>
+          <p>Diebold-Yilmaz 溢出指数是衡量金融系统连通性的标准工具，但现有文献中该指数缺乏规范的统计推断框架——尤其是置信区间的构造。</p>
+          
+          <h3>方法</h3>
+          <p>将<strong> conformal prediction </strong>（分布无关预测推断, Lei et al., JASA 2018）应用于 VAR 框架下的 DY 连通性分析，为各方向性的溢出指数构造分布无关的置信区间。</p>
+          
+          <h3>进展</h3>
+          <ul>
+            <li>精读 Lei et al. (JASA 2018) — 理解 conformal prediction 理论基础</li>
+            <li>探索时间序列场景下的 conformal inference 适配方案</li>
+            <li>与 BEH (2026) 方法论关联分析中</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Project 3: FL + BEKK -->
+      <div class="project-card" id="fl-bekk">
+        <div class="project-header">
+          <span class="project-status exploring">探索中</span>
+          <h2>Federated Learning + BEKK-GARCH</h2>
+        </div>
+        <div class="project-meta">
+          <span><i class="fas fa-tag"></i> 联邦学习 · 隐私计量</span>
+        </div>
+        <div class="project-content">
+          <h3>动机</h3>
+          <p>中国《个人信息保护法》（PIPL）实施后，金融数据跨机构共享面临严格的隐私合规约束。如何在保护原始数据不离开本地的前提下，实现联合波动率建模？</p>
+          
+          <h3>方案</h3>
+          <p>探索联邦学习（federated learning）框架与 BEKK-GARCH 模型的结合路径，在参数层面而非数据层面实现跨机构的波动率信息融合。</p>
+          
+          <h3>进展</h3>
+          <ul>
+            <li>PIPL 合规约束框架调研完成</li>
+            <li>联邦学习用于时间序列建模的方法论文献积累中</li>
+            <li>隐私保护型波动率建模的可行路径评估</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2025-present Jingliang Huai. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Jingliang-Huai" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:huaijl1230@163.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

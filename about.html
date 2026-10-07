@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于我 | Jingliang Huai</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo"><span class="logo-text">Jingliang Huai</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="index.html" class="nav-link">首页</a></li>
+        <li><a href="about.html" class="nav-link active">关于我</a></li>
+        <li><a href="publications.html" class="nav-link">论文发表</a></li>
+        <li><a href="research.html" class="nav-link">工作论文</a></li>
+        <li><a href="notes.html" class="nav-link">学习笔记</a></li>
+        <li><a href="cv.html" class="nav-link">简历</a></li>
+      </ul>
+      <div class="nav-right">
+        <button id="themeToggle" class="theme-btn" aria-label="切换主题"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="container">
+      <h1>关于我</h1>
+      <p class="page-subtitle">About Me</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-photo">
+          <img src="images/avatar-placeholder.svg" alt="Jingliang Huai" class="about-avatar">
+          <div class="about-contact-card">
+            <h3>联系方式</h3>
+            <p><i class="fas fa-envelope"></i> huaijl1230@163.com</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/Jingliang-Huai" target="_blank">Jingliang-Huai</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> 中国</p>
+          </div>
+        </div>
+        <div class="about-bio">
+          <h2>Jingliang Huai</h2>
+          <p class="about-role">经济学/统计学博士生 · 计量经济学独立研究者</p>
+          
+          <h3>研究方向</h3>
+          <p>我的核心研究领域是<strong>多元波动率建模（multivariate volatility models）</strong>，专注于 BEKK-GARCH 框架的参数估计理论与方法创新。当前主线项目为 <strong>State-Weighted QMLE for BEKK-GARCH</strong>，目标冲击统计顶刊。</p>
+          
+          <h3>已发表工作</h3>
+          <p>以独作身份在 <em>Computational Economics</em> (Springer, 2025) 发表 <strong>Extreme-BEKK-GARCH</strong>，提出极端值情境下的 BEKK 模型改进方案。</p>
+          
+          <h3>正在进行的研究</h3>
+          <ul>
+            <li>State-Weighted QMLE for BEKK-GARCH — 统一框架下的状态加权拟极大似然估计</li>
+            <li>Conformal Prediction + DY Connectedness — 为溢出指数构造分布无关置信区间</li>
+            <li>联邦学习 + BEKK-GARCH — PIPL 合规下的隐私保护型波动率建模</li>
+          </ul>
+
+          <h3>学术方法论</h3>
+          <p>我的研究工作遵循结构化的多阶段推进范式：理论构建（Phase 1）→ 方法定位（Phase 2）→ Monte Carlo 模拟验证（Phase 3）→ 真实数据实证（Phase 4）。</p>
+          
+          <h3>持续学习</h3>
+          <p>我正在利用 Resnick《A Probability Path》习题学习概率论基础，重点推进集合极限（set limits）相关章节，为更深入的计量经济学理论研究夯实数学基础。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <p>&copy; 2025-present Jingliang Huai. All rights reserved.</p>
+        </div>
+        <div class="footer-links">
+          <a href="https://github.com/Jingliang-Huai" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:huaijl1230@163.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
