@@ -35,7 +35,7 @@
   <section class="page-header notes-page-header">
     <div class="container">
       <h1>学习笔记</h1>
-      <p class="page-subtitle">计量经济学 · 统计学 · 方法论</p>
+      <p class="page-subtitle">时间序列模型 · 矩阵分析 · 概率论</p>
     </div>
   </section>
 
@@ -48,94 +48,194 @@
       </div>
       <nav class="sidebar-toc" id="sidebarToc">
         <ul class="toc-tree">
-          <!-- === Category 1: 计量经济学基础 === -->
+          <!-- ============================================================ -->
+          <!-- 1. 计量经济学基础 -->
+          <!-- ============================================================ -->
           <li class="toc-item toc-category">
             <span class="toc-toggle" data-target="cat-econometrics">
               <i class="fas fa-chevron-right"></i>
             </span>
             <span class="toc-label" data-target="cat-econometrics">📊 计量经济学基础</span>
             <ul class="toc-children" id="cat-econometrics">
-              <li class="toc-item toc-leaf" data-note="qmle-theory">
-                <a href="#qmle-theory"><i class="fas fa-file-alt"></i> QMLE 渐近理论</a>
+              <!-- Subtopic: BEKK-GARCH 理论 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-bekk-theory">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-bekk-theory">BEKK-GARCH 理论</span>
+                <ul class="toc-children" id="sub-bekk-theory">
+                  <li class="toc-item toc-leaf" data-note="qmle-theory">
+                    <a href="#qmle-theory"><i class="fas fa-file-alt"></i> QMLE 渐近理论</a>
+                  </li>
+                  <li class="toc-item toc-leaf" data-note="bekk-intro">
+                    <a href="#bekk-intro"><i class="fas fa-file-alt"></i> BEKK-GARCH 入门</a>
+                  </li>
+                </ul>
               </li>
-              <li class="toc-item toc-leaf" data-note="bekk-intro">
-                <a href="#bekk-intro"><i class="fas fa-file-alt"></i> BEKK-GARCH 入门</a>
-              </li>
-              <li class="toc-item toc-leaf" data-note="extreme-bekk">
-                <a href="#extreme-bekk"><i class="fas fa-file-alt"></i> Extreme-BEKK-GARCH</a>
-              </li>
-              <li class="toc-item toc-leaf" data-note="estimation-methods">
-                <a href="#estimation-methods"><i class="fas fa-file-alt"></i> 估计方法比较: QMLE vs MLE vs GMM</a>
+              <!-- Subtopic: 方法扩展 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-extensions">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-extensions">方法扩展</span>
+                <ul class="toc-children" id="sub-extensions">
+                  <li class="toc-item toc-leaf" data-note="extreme-bekk">
+                    <a href="#extreme-bekk"><i class="fas fa-file-alt"></i> Extreme-BEKK-GARCH</a>
+                  </li>
+                  <li class="toc-item toc-leaf" data-note="estimation-methods">
+                    <a href="#estimation-methods"><i class="fas fa-file-alt"></i> 估计方法比较: QMLE vs MLE vs GMM</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
 
-          <!-- === Category 2: Conformal Prediction === -->
+          <!-- ============================================================ -->
+          <!-- 2. Conformal Prediction -->
+          <!-- ============================================================ -->
           <li class="toc-item toc-category">
             <span class="toc-toggle" data-target="cat-conformal">
               <i class="fas fa-chevron-right"></i>
             </span>
             <span class="toc-label" data-target="cat-conformal">🔮 Conformal Prediction</span>
             <ul class="toc-children" id="cat-conformal">
-              <li class="toc-item toc-leaf" data-note="lei2018">
-                <a href="#lei2018"><i class="fas fa-file-alt"></i> Lei et al. (JASA 2018) 精读</a>
+              <!-- Subtopic: 理论基础 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-cp-theory">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-cp-theory">理论基础</span>
+                <ul class="toc-children" id="sub-cp-theory">
+                  <li class="toc-item toc-leaf" data-note="lei2018">
+                    <a href="#lei2018"><i class="fas fa-file-alt"></i> Lei et al. (JASA 2018) 精读</a>
+                  </li>
+                </ul>
               </li>
-              <li class="toc-item toc-leaf" data-note="cp-timeseries">
-                <a href="#cp-timeseries"><i class="fas fa-file-alt"></i> CP + 时间序列适配</a>
-              </li>
-              <li class="toc-item toc-leaf" data-note="cp-dy">
-                <a href="#cp-dy"><i class="fas fa-file-alt"></i> CP + DY Connectedness</a>
+              <!-- Subtopic: 方法论扩展 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-cp-ext">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-cp-ext">方法论扩展</span>
+                <ul class="toc-children" id="sub-cp-ext">
+                  <li class="toc-item toc-leaf" data-note="cp-timeseries">
+                    <a href="#cp-timeseries"><i class="fas fa-file-alt"></i> CP + 时间序列适配</a>
+                  </li>
+                  <li class="toc-item toc-leaf" data-note="cp-dy">
+                    <a href="#cp-dy"><i class="fas fa-file-alt"></i> CP + DY Connectedness</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
 
-          <!-- === Category 3: 概率论 === -->
+          <!-- ============================================================ -->
+          <!-- 3. 概率论基础 -->
+          <!-- ============================================================ -->
           <li class="toc-item toc-category">
             <span class="toc-toggle" data-target="cat-probability">
               <i class="fas fa-chevron-right"></i>
             </span>
             <span class="toc-label" data-target="cat-probability">📐 概率论基础</span>
             <ul class="toc-children" id="cat-probability">
-              <li class="toc-item toc-leaf" data-note="set-limits">
-                <a href="#set-limits"><i class="fas fa-file-alt"></i> Resnick: 集合极限 (Set Limits)</a>
+              <!-- Subtopic: 集合论 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-set-limits">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-set-limits">集合论</span>
+                <ul class="toc-children" id="sub-set-limits">
+                  <li class="toc-item toc-leaf" data-note="set-limits">
+                    <a href="#set-limits"><i class="fas fa-file-alt"></i> Resnick: 集合极限 (Set Limits)</a>
+                  </li>
+                </ul>
               </li>
-              <li class="toc-item toc-leaf" data-note="measure-theory">
-                <a href="#measure-theory"><i class="fas fa-file-alt"></i> 测度论核心概念</a>
+              <!-- Subtopic: 测度论 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-measure">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-measure">测度论</span>
+                <ul class="toc-children" id="sub-measure">
+                  <li class="toc-item toc-leaf" data-note="measure-theory">
+                    <a href="#measure-theory"><i class="fas fa-file-alt"></i> 测度论核心概念</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
 
-          <!-- === Category 4: 金融网络与连通性 === -->
+          <!-- ============================================================ -->
+          <!-- 4. 金融网络与连通性 -->
+          <!-- ============================================================ -->
           <li class="toc-item toc-category">
             <span class="toc-toggle" data-target="cat-connectedness">
               <i class="fas fa-chevron-right"></i>
             </span>
             <span class="toc-label" data-target="cat-connectedness">🔗 金融网络与连通性</span>
             <ul class="toc-children" id="cat-connectedness">
-              <li class="toc-item toc-leaf" data-note="dy-spillover">
-                <a href="#dy-spillover"><i class="fas fa-file-alt"></i> DY 溢出指数框架</a>
+              <!-- Subtopic: 方法论基础 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-conn-method">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-conn-method">方法论基础</span>
+                <ul class="toc-children" id="sub-conn-method">
+                  <li class="toc-item toc-leaf" data-note="dy-spillover">
+                    <a href="#dy-spillover"><i class="fas fa-file-alt"></i> DY 溢出指数框架</a>
+                  </li>
+                </ul>
               </li>
-              <li class="toc-item toc-leaf" data-note="beh2026">
-                <a href="#beh2026"><i class="fas fa-file-alt"></i> BEH (2026) 精读</a>
+              <!-- Subtopic: 前沿文献 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-conn-lit">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-conn-lit">前沿文献</span>
+                <ul class="toc-children" id="sub-conn-lit">
+                  <li class="toc-item toc-leaf" data-note="beh2026">
+                    <a href="#beh2026"><i class="fas fa-file-alt"></i> BEH (2026) 精读</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
 
-          <!-- === Category 5: 联邦学习 === -->
+          <!-- ============================================================ -->
+          <!-- 5. 联邦学习与隐私计量 -->
+          <!-- ============================================================ -->
           <li class="toc-item toc-category">
             <span class="toc-toggle" data-target="cat-fl">
               <i class="fas fa-chevron-right"></i>
             </span>
             <span class="toc-label" data-target="cat-fl">🔒 联邦学习与隐私计量</span>
             <ul class="toc-children" id="cat-fl">
-              <li class="toc-item toc-leaf" data-note="fl-overview">
-                <a href="#fl-overview"><i class="fas fa-file-alt"></i> FL 方法调研笔记</a>
+              <!-- Subtopic: FL 方法论 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-fl-method">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-fl-method">FL 方法论</span>
+                <ul class="toc-children" id="sub-fl-method">
+                  <li class="toc-item toc-leaf" data-note="fl-overview">
+                    <a href="#fl-overview"><i class="fas fa-file-alt"></i> FL 方法调研笔记</a>
+                  </li>
+                  <li class="toc-item toc-leaf" data-note="fl-bekk">
+                    <a href="#fl-bekk"><i class="fas fa-file-alt"></i> FL + BEKK-GARCH 方案</a>
+                  </li>
+                </ul>
               </li>
-              <li class="toc-item toc-leaf" data-note="fl-bekk">
-                <a href="#fl-bekk"><i class="fas fa-file-alt"></i> FL + BEKK-GARCH 方案</a>
-              </li>
-              <li class="toc-item toc-leaf" data-note="pipl">
-                <a href="#pipl"><i class="fas fa-file-alt"></i> PIPL 合规框架</a>
+              <!-- Subtopic: 合规相关 -->
+              <li class="toc-item toc-subtopic">
+                <span class="toc-toggle" data-target="sub-fl-compliance">
+                  <i class="fas fa-chevron-right"></i>
+                </span>
+                <span class="toc-subtopic-label" data-target="sub-fl-compliance">合规相关</span>
+                <ul class="toc-children" id="sub-fl-compliance">
+                  <li class="toc-item toc-leaf" data-note="pipl">
+                    <a href="#pipl"><i class="fas fa-file-alt"></i> PIPL 合规框架</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -145,592 +245,718 @@
 
     <!-- ======== MAIN CONTENT ======== -->
     <main class="notebook-main">
-      <!-- ============================== NOTE 1: QMLE Theory ============================== -->
-      <article class="note-card-expandable" id="qmle-theory" data-category="econometrics">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-chart-line"></i></span>
-            <div>
-              <h3>QMLE 渐近理论 — 从似然到拟似然</h3>
-              <p class="note-card-meta">计量经济学基础 · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>核心思想</h4>
-            <p>QMLE（拟极大似然估计）的核心在于：即使真实分布 <strong>不是</strong> 假定的分布族，最大化"错误"的似然函数仍然可以得到一致且渐近正态的估计量——前提是矩条件被正确设定。</p>
 
-            <h4>White (1982) 奠基性工作</h4>
-            <p>White 的"Maximum likelihood estimation of misspecified models"（<em>Econometrica</em>, 1982）建立了 QMLE 渐近理论的两大支柱：</p>
-            <ul>
-              <li><strong>一致性</strong>：QMLE 收敛到使 KL 散度最小的伪真值（pseudo-true value）</li>
-              <li><strong>渐近正态性</strong>：使用 sandwich 协方差矩阵 <code>H<sup>-1</sup> J H<sup>-1</sup></code></li>
-            </ul>
+      <!-- ================================================================ -->
+      <!-- 计量经济学基础 -->
+      <!-- ================================================================ -->
+      <div class="subtopic-section">
+        <h2 class="subtopic-section-title">📊 计量经济学基础</h2>
 
-            <h4>在 BEKK-GARCH 中的关键问题</h4>
-            <ul>
-              <li>波动率模型中的 QMLE 需要满足 <strong>鞅差（martingale difference）</strong> 创新假设</li>
-              <li>当创新分布具有厚尾时，sandwich 协方差估计可能不稳定</li>
-              <li>高维 BEKK 的 QMLE 面临"维数诅咒"：随资产数增加，参数数量呈二次增长</li>
-            </ul>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            BEKK-GARCH 理论
+            <span class="subtopic-count">2 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 1: QMLE Theory -->
+            <article class="note-card-expandable" id="qmle-theory" data-category="econometrics">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-chart-line"></i></span>
+                  <div>
+                    <h3>QMLE 渐近理论 — 从似然到拟似然</h3>
+                    <p class="note-card-meta">计量经济学基础 · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>核心思想</h4>
+                  <p>QMLE（拟极大似然估计）的核心在于：即使真实分布 <strong>不是</strong> 假定的分布族，最大化"错误"的似然函数仍然可以得到一致且渐近正态的估计量——前提是矩条件被正确设定。</p>
 
-            <div class="note-math">
-              <p><strong>Sandwich 协方差矩阵形式：</strong></p>
-              <p><code>AVar(θ̂) = [E(-∇²ℓ<sub>t</sub>(θ))]<sup>-1</sup> · Var(∇ℓ<sub>t</sub>(θ)) · [E(-∇²ℓ<sub>t</sub>(θ))]<sup>-1</sup></code></p>
-            </div>
+                  <h4>White (1982) 奠基性工作</h4>
+                  <p>White 的"Maximum likelihood estimation of misspecified models"（<em>Econometrica</em>, 1982）建立了 QMLE 渐近理论的两大支柱：</p>
+                  <ul>
+                    <li><strong>一致性</strong>：QMLE 收敛到使 KL 散度最小的伪真值（pseudo-true value）</li>
+                    <li><strong>渐近正态性</strong>：使用 sandwich 协方差矩阵 <code>H<sup>-1</sup> J H<sup>-1</sup></code></li>
+                  </ul>
 
-            <div class="note-refs">
-              <p><strong>参考文献：</strong></p>
-              <ul>
-                <li>White, H. (1982). Maximum likelihood estimation of misspecified models. <em>Econometrica</em>, 50(1), 1-25.</li>
-                <li>Bollerslev, T. & Wooldridge, J.M. (1992). Quasi-maximum likelihood estimation and inference in dynamic models with time-varying covariances. <em>Econometric Reviews</em>, 11(2), 143-172.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </article>
+                  <h4>在 BEKK-GARCH 中的关键问题</h4>
+                  <ul>
+                    <li>波动率模型中的 QMLE 需要满足 <strong>鞅差（martingale difference）</strong> 创新假设</li>
+                    <li>当创新分布具有厚尾时，sandwich 协方差估计可能不稳定</li>
+                    <li>高维 BEKK 的 QMLE 面临"维数诅咒"：随资产数增加，参数数量呈二次增长</li>
+                  </ul>
 
-      <!-- ============================== NOTE 2: BEKK-GARCH Intro ============================== -->
-      <article class="note-card-expandable" id="bekk-intro" data-category="econometrics">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-cubes"></i></span>
-            <div>
-              <h3>BEKK-GARCH 入门 — 多元波动率建模框架</h3>
-              <p class="note-card-meta">计量经济学基础 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>模型形式</h4>
-            <p>BEKK(p,q,K) 模型由 Baba, Engle, Kraft & Kroner (1995) 提出，其核心形式为：</p>
-            <div class="note-math">
-              <p><code>H<sub>t</sub> = C'C + Σ<sub>k=1</sub><sup>K</sup> Σ<sub>i=1</sub><sup>q</sup> A<sub>ki</sub>' ε<sub>t-i</sub>ε<sub>t-i</sub>' A<sub>ki</sub> + Σ<sub>k=1</sub><sup>K</sup> Σ<sub>j=1</sub><sup>p</sup> B<sub>kj</sub>' H<sub>t-j</sub> B<sub>kj</sub></code></p>
-            </div>
+                  <div class="note-math">
+                    <p><strong>Sandwich 协方差矩阵形式：</strong></p>
+                    <p><code>AVar(θ̂) = [E(-∇²ℓ<sub>t</sub>(θ))]<sup>-1</sup> · Var(∇ℓ<sub>t</sub>(θ)) · [E(-∇²ℓ<sub>t</sub>(θ))]<sup>-1</sup></code></p>
+                  </div>
 
-            <h4>关键优势</h4>
-            <ul>
-              <li><strong>正定性自动保证</strong>：通过二次型结构，无需对参数施加正定性约束</li>
-              <li><strong>参数化简洁</strong>：相比 VEC 模型大幅减少参数数量</li>
-              <li><strong>对称性约束</strong>：通过 K=1（标量 BEKK）进一步降低维度</li>
-            </ul>
+                  <div class="note-refs">
+                    <p><strong>参考文献：</strong></p>
+                    <ul>
+                      <li>White, H. (1982). Maximum likelihood estimation of misspecified models. <em>Econometrica</em>, 50(1), 1-25.</li>
+                      <li>Bollerslev, T. & Wooldridge, J.M. (1992). Quasi-maximum likelihood estimation and inference in dynamic models with time-varying covariances. <em>Econometric Reviews</em>, 11(2), 143-172.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-            <h4>局限</h4>
-            <ul>
-              <li>即使 K=1 的 BEKK(1,1,1)，参数数量仍为 O(N²) 量级</li>
-              <li>参数解释性较弱（A 和 B 矩阵元素没有直观经济含义）</li>
-              <li>高维下的数值优化非常困难</li>
-            </ul>
+            <!-- NOTE 2: BEKK-GARCH Intro -->
+            <article class="note-card-expandable" id="bekk-intro" data-category="econometrics">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-cubes"></i></span>
+                  <div>
+                    <h3>BEKK-GARCH 入门 — 多元波动率建模框架</h3>
+                    <p class="note-card-meta">计量经济学基础 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>模型形式</h4>
+                  <p>BEKK(p,q,K) 模型由 Baba, Engle, Kraft & Kroner (1995) 提出，其核心形式为：</p>
+                  <div class="note-math">
+                    <p><code>H<sub>t</sub> = C'C + Σ<sub>k=1</sub><sup>K</sup> Σ<sub>i=1</sub><sup>q</sup> A<sub>ki</sub>' ε<sub>t-i</sub>ε<sub>t-i</sub>' A<sub>ki</sub> + Σ<sub>k=1</sub><sup>K</sup> Σ<sub>j=1</sub><sup>p</sup> B<sub>kj</sub>' H<sub>t-j</sub> B<sub>kj</sub></code></p>
+                  </div>
 
-            <h4>在 State-Weighted 框架中的扩展</h4>
-            <p>State-Weighted BEKK-GARCH 通过引入生成函数 g(·|S<sub>t-1</sub>)，将标准 BEKK 扩展为：</p>
-            <div class="note-math">
-              <p><code>H<sub>t</sub> = C'C + A' ε<sub>t-1</sub>ε<sub>t-1</sub>' ⊙ g(·|S<sub>t-1</sub>) A + B' H<sub>t-1</sub> B</code></p>
-            </div>
-            <p>其中 g 函数刻画了状态对条件方差的影响，通过数据驱动的方式实现"软"体制切换。</p>
-          </div>
-        </div>
-      </article>
+                  <h4>关键优势</h4>
+                  <ul>
+                    <li><strong>正定性自动保证</strong>：通过二次型结构，无需对参数施加正定性约束</li>
+                    <li><strong>参数化简洁</strong>：相比 VEC 模型大幅减少参数数量</li>
+                    <li><strong>对称性约束</strong>：通过 K=1（标量 BEKK）进一步降低维度</li>
+                  </ul>
 
-      <!-- ============================== NOTE 3: Extreme-BEKK ============================== -->
-      <article class="note-card-expandable" id="extreme-bekk" data-category="econometrics">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-exclamation-triangle"></i></span>
-            <div>
-              <h3>Extreme-BEKK-GARCH — 极端值情境下的波动率建模</h3>
-              <p class="note-card-meta">已发表论文 · 2025</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>动机</h4>
-            <p>标准 BEKK-GARCH 模型在正常市场条件下表现良好，但在金融危机、黑天鹅事件等极端波动情境下，创新分布呈现明显厚尾特征，QMLE 的效率大幅下降。</p>
+                  <h4>局限</h4>
+                  <ul>
+                    <li>即使 K=1 的 BEKK(1,1,1)，参数数量仍为 O(N²) 量级</li>
+                    <li>参数解释性较弱（A 和 B 矩阵元素没有直观经济含义）</li>
+                    <li>高维下的数值优化非常困难</li>
+                  </ul>
 
-            <h4>方法</h4>
-            <p>Extreme-BEKK-GARCH 在标准 BEKK 框架中引入极端值调整机制（EV adjustment）：</p>
-            <ul>
-              <li>使用极值理论（EVT）中的 POT（Peaks Over Threshold）方法识别极端观测</li>
-              <li>对极端值赋予下采样权重，降低其对 QMLE 的不当影响</li>
-              <li>在正态-极端混合分布假设下推导 QMLE 的渐近性质</li>
-            </ul>
-
-            <h4>主要结果</h4>
-            <ul>
-              <li>MC 模拟表明：极端值出现频率 >5% 时，Extreme-BEKK 的 MSE 比标准 BEKK 降低 20-40%</li>
-              <li>实证（SP500 + WTI）：极端市场时期预测精度显著改善</li>
-              <li>已发表在 <em>Computational Economics</em> (Springer, 2025)，独作</li>
-            </ul>
-
-            <div class="note-refs">
-              <p><strong>引用：</strong></p>
-              <p>Huai, J. (2025). Extreme-BEKK-GARCH. <em>Computational Economics</em>. DOI: 10.1007/s10614-025-10913-6</p>
-            </div>
+                  <h4>在 State-Weighted 框架中的扩展</h4>
+                  <p>State-Weighted BEKK-GARCH 通过引入生成函数 g(·|S<sub>t-1</sub>)，将标准 BEKK 扩展为：</p>
+                  <div class="note-math">
+                    <p><code>H<sub>t</sub> = C'C + A' ε<sub>t-1</sub>ε<sub>t-1</sub>' ⊙ g(·|S<sub>t-1</sub>) A + B' H<sub>t-1</sub> B</code></p>
+                  </div>
+                  <p>其中 g 函数刻画了状态对条件方差的影响，通过数据驱动的方式实现"软"体制切换。</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
 
-      <!-- ============================== NOTE 4: Estimation Methods ============================== -->
-      <article class="note-card-expandable" id="estimation-methods" data-category="econometrics">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-balance-scale"></i></span>
-            <div>
-              <h3>BEKK-GARCH 估计方法比较: QMLE vs MLE vs GMM</h3>
-              <p class="note-card-meta">方法论笔记 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>三类方法的对比框架</h4>
-            <table class="note-table">
-              <thead>
-                <tr>
-                  <th>方法</th>
-                  <th>假设条件</th>
-                  <th>优势</th>
-                  <th>劣势</th>
-                  <th>BEKK 适用性</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>MLE</strong></td>
-                  <td>正确指定分布</td>
-                  <td>效率最优 (C-R 下界)</td>
-                  <td>分布误设导致不一致</td>
-                  <td>仅当正态假设严格成立</td>
-                </tr>
-                <tr>
-                  <td><strong>QMLE</strong></td>
-                  <td>正确指定一阶/二阶矩</td>
-                  <td>分布稳健，一致性+渐近正态</td>
-                  <td>效率低于 MLE（如果分布正确）</td>
-                  <td>✔ 最常用</td>
-                </tr>
-                <tr>
-                  <td><strong>GMM</strong></td>
-                  <td>正确指定矩条件</td>
-                  <td>无需似然函数</td>
-                  <td>有限样本表现差，矩选择主观</td>
-                  <td>高维时不稳定</td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            方法扩展
+            <span class="subtopic-count">2 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 3: Extreme-BEKK -->
+            <article class="note-card-expandable" id="extreme-bekk" data-category="econometrics">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-exclamation-triangle"></i></span>
+                  <div>
+                    <h3>Extreme-BEKK-GARCH — 极端值情境下的波动率建模</h3>
+                    <p class="note-card-meta">已发表论文 · 2025</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>动机</h4>
+                  <p>标准 BEKK-GARCH 模型在正常市场条件下表现良好，但在金融危机、黑天鹅事件等极端波动情境下，创新分布呈现明显厚尾特征，QMLE 的效率大幅下降。</p>
 
-            <h4>有限样本表现</h4>
-            <p>根据 MC 模拟结果：</p>
-            <ul>
-              <li>N=50（样本量不足）时，QMLE 的偏差显著</li>
-              <li>N > 500 后，QMLE 与 MLE 的差距可忽略（即使真实分布是正态）</li>
-              <li>GMM 在 N > 1000 后才能与 QMLE 竞争</li>
-              <li>高维（N=10 资产，即 65 个参数）下，所有方法都面临收敛困难</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+                  <h4>方法</h4>
+                  <p>Extreme-BEKK-GARCH 在标准 BEKK 框架中引入极端值调整机制（EV adjustment）：</p>
+                  <ul>
+                    <li>使用极值理论（EVT）中的 POT（Peaks Over Threshold）方法识别极端观测</li>
+                    <li>对极端值赋予下采样权重，降低其对 QMLE 的不当影响</li>
+                    <li>在正态-极端混合分布假设下推导 QMLE 的渐近性质</li>
+                  </ul>
 
-      <!-- ============================== NOTE 5: Lei et al. 2018 ============================== -->
-      <article class="note-card-expandable" id="lei2018" data-category="conformal">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-robot"></i></span>
-            <div>
-              <h3>Lei et al. (JASA 2018) — Distribution-Free Predictive Inference 精读</h3>
-              <p class="note-card-meta">Conformal Prediction · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>论文核心贡献</h4>
-            <p>Lei et al. (2018) 系统化了 distribution-free prediction 的理论框架，提出 split conformal prediction 方法：</p>
-            <ul>
-              <li>将样本分为训练集和校准集（calibration set）</li>
-              <li>在校准集上计算 conformity score</li>
-              <li>预测区间由经验分位数决定，无需分布假设</li>
-            </ul>
+                  <h4>主要结果</h4>
+                  <ul>
+                    <li>MC 模拟表明：极端值出现频率 >5% 时，Extreme-BEKK 的 MSE 比标准 BEKK 降低 20-40%</li>
+                    <li>实证（SP500 + WTI）：极端市场时期预测精度显著改善</li>
+                    <li>已发表在 <em>Computational Economics</em> (Springer, 2025)，独作</li>
+                  </ul>
 
-            <h4>Split Conformal Prediction 算法</h4>
-            <ol>
-              <li>将数据随机分为训练集和校准集</li>
-              <li>在训练集上拟合模型 f̂</li>
-              <li>在校准集上计算残差 |Y<sub>i</sub> - f̂(X<sub>i</sub>)|</li>
-              <li>取校准残差的 (1-α) 分位数作为 d̂</li>
-              <li>对新样本 X<sub>n+1</sub>，预测区间为 [f̂(X<sub>n+1</sub>) - d̂, f̂(X<sub>n+1</sub>) + d̂]</li>
-            </ol>
+                  <div class="note-refs">
+                    <p><strong>引用：</strong></p>
+                    <p>Huai, J. (2025). Extreme-BEKK-GARCH. <em>Computational Economics</em>. DOI: 10.1007/s10614-025-10913-6</p>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-            <h4>理论性质</h4>
-            <div class="note-math">
-              <p><strong>有限样本保证：</strong></p>
-              <p><code>P(Y<sub>n+1</sub> ∈ Ĉ<sub>n</sub>(X<sub>n+1</sub>)) ≥ 1 - α</code></p>
-              <p>这个保证是<strong>精确的</strong>（在任何分布下都成立，无论样本量大小）。</p>
-            </div>
+            <!-- NOTE 4: Estimation Methods -->
+            <article class="note-card-expandable" id="estimation-methods" data-category="econometrics">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-balance-scale"></i></span>
+                  <div>
+                    <h3>BEKK-GARCH 估计方法比较: QMLE vs MLE vs GMM</h3>
+                    <p class="note-card-meta">方法论笔记 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>三类方法的对比框架</h4>
+                  <table class="note-table">
+                    <thead>
+                      <tr>
+                        <th>方法</th>
+                        <th>假设条件</th>
+                        <th>优势</th>
+                        <th>劣势</th>
+                        <th>BEKK 适用性</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>MLE</strong></td>
+                        <td>正确指定分布</td>
+                        <td>效率最优 (C-R 下界)</td>
+                        <td>分布误设导致不一致</td>
+                        <td>仅当正态假设严格成立</td>
+                      </tr>
+                      <tr>
+                        <td><strong>QMLE</strong></td>
+                        <td>正确指定一阶/二阶矩</td>
+                        <td>分布稳健，一致性+渐近正态</td>
+                        <td>效率低于 MLE（如果分布正确）</td>
+                        <td>✔ 最常用</td>
+                      </tr>
+                      <tr>
+                        <td><strong>GMM</strong></td>
+                        <td>正确指定矩条件</td>
+                        <td>无需似然函数</td>
+                        <td>有限样本表现差，矩选择主观</td>
+                        <td>高维时不稳定</td>
+                      </tr>
+                    </tbody>
+                  </table>
 
-            <h4>向时间序列扩展的挑战</h4>
-            <ul>
-              <li>时间序列存在自相关，破坏了 exchangeability 假设</li>
-              <li>可能的解决方案：block conformal prediction、adaptive conformal inference</li>
-              <li>在 DY connectedness 场景中，需要考虑 VAR 残差的结构</li>
-            </ul>
-          </div>
-        </div>
-      </article>
-
-      <!-- ============================== NOTE 6: CP + Time Series ============================== -->
-      <article class="note-card-expandable" id="cp-timeseries" data-category="conformal">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-clock"></i></span>
-            <div>
-              <h3>Conformal Prediction 与时间序列的适配方案</h3>
-              <p class="note-card-meta">Conformal Prediction · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>为什么时间序列场景有挑战？</h4>
-            <p>标准 conformal prediction 的核心假设是 <strong>exchangeability（可交换性）</strong>，即样本的联合分布在置换下不变。时间序列数据显然违反这一假设（顺序包含信息）。</p>
-
-            <h4>已有适配方案</h4>
-            <table class="note-table">
-              <thead><tr><th>方法</th><th>来源</th><th>核心思想</th></tr></thead>
-              <tbody>
-                <tr><td>EnbPI</td><td>Xu & Xie (2021)</td><td>集成 bootstrap 预测 + 滑动窗口校准</td></tr>
-                <tr><td>ACI</td><td>Gibbs & Candès (2021)</td><td>自适应调整名义覆盖率的步长</td></tr>
-                <tr><td>Block CP</td><td>Chernozhukov et al.</td><td>用 block bootstrap 保持时序依赖结构</td></tr>
-              </tbody>
-            </table>
-
-            <h4>对 DY Connectedness 的场景评估</h4>
-            <ul>
-              <li>VAR 残差近似鞅差序列，exchangability 的违反程度可能较小</li>
-              <li>滑动窗口校准（rolling calibration）可能是最实用的方案</li>
-              <li>关键问题：需要为 <strong>每个</strong> 方向性溢出指数分别构造区间，还是构造联合区间？</li>
-            </ul>
+                  <h4>有限样本表现</h4>
+                  <p>根据 MC 模拟结果：</p>
+                  <ul>
+                    <li>N=50（样本量不足）时，QMLE 的偏差显著</li>
+                    <li>N > 500 后，QMLE 与 MLE 的差距可忽略（即使真实分布是正态）</li>
+                    <li>GMM 在 N > 1000 后才能与 QMLE 竞争</li>
+                    <li>高维（N=10 资产，即 65 个参数）下，所有方法都面临收敛困难</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- ============================== NOTE 7: CP + DY ============================== -->
-      <article class="note-card-expandable" id="cp-dy" data-category="conformal">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-project-diagram"></i></span>
-            <div>
-              <h3>Conformal Prediction + DY Connectedness 融合方案</h3>
-              <p class="note-card-meta">研究项目 · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>问题定位</h4>
-            <p>Diebold-Yilmaz（2012, 2014）溢出指数是金融网络连通性的标准度量，但其统计推断（尤其是置信区间）长期缺乏令人满意的解决方案：</p>
-            <ul>
-              <li>传统 Delta 方法依赖泰勒展开，大样本假设过强</li>
-              <li>bootstrap 方法计算昂贵，且覆盖精度受时序依赖影响</li>
-            </ul>
+      <!-- ================================================================ -->
+      <!-- Conformal Prediction -->
+      <!-- ================================================================ -->
+      <div class="subtopic-section">
+        <h2 class="subtopic-section-title">🔮 Conformal Prediction</h2>
 
-            <h4>提出的方法</h4>
-            <p>将 conformal prediction 应用于 DY 溢出指数框架：</p>
-            <ol>
-              <li>使用 VAR 模型估计各方向的预测误差方差分解（FEVD）</li>
-              <li>将溢出指数视为预测误差的函数，构造 convolution score</li>
-              <li>校准集来自历史的滚动窗口，保证时序一致性</li>
-              <li>输出每个方向性溢出指数的 (1-α) 水平置信区间</li>
-            </ol>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            理论基础
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 5: Lei et al. 2018 -->
+            <article class="note-card-expandable" id="lei2018" data-category="conformal">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-robot"></i></span>
+                  <div>
+                    <h3>Lei et al. (JASA 2018) — Distribution-Free Predictive Inference 精读</h3>
+                    <p class="note-card-meta">Conformal Prediction · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>论文核心贡献</h4>
+                  <p>Lei et al. (2018) 系统化了 distribution-free prediction 的理论框架，提出 split conformal prediction 方法：</p>
+                  <ul>
+                    <li>将样本分为训练集和校准集（calibration set）</li>
+                    <li>在校准集上计算 conformity score</li>
+                    <li>预测区间由经验分位数决定，无需分布假设</li>
+                  </ul>
 
-            <h4>优势</h4>
-            <ul>
-              <li>分布无关：不需要 FEVD 的渐近分布假设</li>
-              <li>有限样本保证：即使样本量小也有效（理论保证）</li>
-              <li>计算高效：split conformal 只需一次模型估计</li>
-            </ul>
+                  <h4>Split Conformal Prediction 算法</h4>
+                  <ol>
+                    <li>将数据随机分为训练集和校准集</li>
+                    <li>在训练集上拟合模型 f̂</li>
+                    <li>在校准集上计算残差 |Y<sub>i</sub> - f̂(X<sub>i</sub>)|</li>
+                    <li>取校准残差的 (1-α) 分位数作为 d̂</li>
+                    <li>对新样本 X<sub>n+1</sub>，预测区间为 [f̂(X<sub>n+1</sub>) - d̂, f̂(X<sub>n+1</sub>) + d̂]</li>
+                  </ol>
 
-            <h4>待解决的问题</h4>
-            <ul>
-              <li>如何定义合适的 conformity score（溢出指数的函数形式复杂）</li>
-              <li>多步预测的累积不确定性如何传播</li>
-              <li>带宽参数（滚动窗口长度）的选择</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+                  <h4>理论性质</h4>
+                  <div class="note-math">
+                    <p><strong>有限样本保证：</strong></p>
+                    <p><code>P(Y<sub>n+1</sub> ∈ Ĉ<sub>n</sub>(X<sub>n+1</sub>)) ≥ 1 - α</code></p>
+                    <p>这个保证是<strong>精确的</strong>（在任何分布下都成立，无论样本量大小）。</p>
+                  </div>
 
-      <!-- ============================== NOTE 8: Set Limits ============================== -->
-      <article class="note-card-expandable" id="set-limits" data-category="probability">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-infinity"></i></span>
-            <div>
-              <h3>Resnick《A Probability Path》— 集合极限 (Set Limits)</h3>
-              <p class="note-card-meta">概率论 · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>核心概念</h4>
-            <p>集合极限是测度论的基础。对一列集合 {A<sub>n</sub>}，定义：</p>
-            <div class="note-math">
-              <p><strong>上极限（limsup）：</strong></p>
-              <p><code>limsup A<sub>n</sub> = ∩<sub>n=1</sub><sup>∞</sup> ∪<sub>k=n</sub><sup>∞</sup> A<sub>k</sub> = {ω: ω 出现在无穷多个 A<sub>n</sub> 中}</code></p>
-              <p><strong>下极限（liminf）：</strong></p>
-              <p><code>liminf A<sub>n</sub> = ∪<sub>n=1</sub><sup>∞</sup> ∩<sub>k=n</sub><sup>∞</sup> A<sub>k</sub> = {ω: ω 出现在除了有限个之外的所有 A<sub>n</sub> 中}</code></p>
-            </div>
-
-            <h4>直观理解</h4>
-            <ul>
-              <li><code>limsup A<sub>n</sub></code> = "无穷多次发生"的事件</li>
-              <li><code>liminf A<sub>n</sub></code> = "最终一直发生"的事件</li>
-              <li>显然：liminf A<sub>n</sub> ⊆ limsup A<sub>n</sub></li>
-              <li>当两者相等时，称集合序列收敛：lim A<sub>n</sub> = limsup A<sub>n</sub> = liminf A<sub>n</sub></li>
-            </ul>
-
-            <h4>与概率论的连接</h4>
-            <p>Borel-Cantelli 引理：</p>
-            <ul>
-              <li><strong>第一引理</strong>：Σ P(A<sub>n</sub>) < ∞ → P(limsup A<sub>n</sub>) = 0</li>
-              <li><strong>第二引理</strong>：若 A<sub>n</sub> 独立且 Σ P(A<sub>n</sub>) = ∞ → P(limsup A<sub>n</sub>) = 1</li>
-            </ul>
-            <p>这是连接集合极限论与概率测度的关键桥梁，也是几乎所有强极限定理的基础。</p>
+                  <h4>向时间序列扩展的挑战</h4>
+                  <ul>
+                    <li>时间序列存在自相关，破坏了 exchangeability 假设</li>
+                    <li>可能的解决方案：block conformal prediction、adaptive conformal inference</li>
+                    <li>在 DY connectedness 场景中，需要考虑 VAR 残差的结构</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
 
-      <!-- ============================== NOTE 9: Measure Theory ============================== -->
-      <article class="note-card-expandable" id="measure-theory" data-category="probability">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-ruler"></i></span>
-            <div>
-              <h3>测度论核心概念 — σ-域、可测性与测度</h3>
-              <p class="note-card-meta">概率论 · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>σ-域（σ-algebra）</h4>
-            <p>σ-域是"可测集"的集合体系，满足三条公理：</p>
-            <ul>
-              <li>Ω ∈ ℱ（全集可测）</li>
-              <li>若 A ∈ ℱ，则 A<sup>c</sup> ∈ ℱ（余集封闭）</li>
-              <li>若 {A<sub>n</sub>}<sub>n≥1</sub> ⊆ ℱ，则 ∪A<sub>n</sub> ∈ ℱ（可数并封闭）</li>
-            </ul>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            方法论扩展
+            <span class="subtopic-count">2 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 6: CP + Time Series -->
+            <article class="note-card-expandable" id="cp-timeseries" data-category="conformal">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-clock"></i></span>
+                  <div>
+                    <h3>Conformal Prediction 与时间序列的适配方案</h3>
+                    <p class="note-card-meta">Conformal Prediction · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>为什么时间序列场景有挑战？</h4>
+                  <p>标准 conformal prediction 的核心假设是 <strong>exchangeability（可交换性）</strong>，即样本的联合分布在置换下不变。时间序列数据显然违反这一假设（顺序包含信息）。</p>
 
-            <h4>Borel σ-域 vs. 可测空间</h4>
-            <p>Borel σ-域 ℬ(R) 是包含 R 上所有开集的最小 σ-域。在金融时间序列中，我们通常假设随机变量定义在 (Ω, ℱ, P) 上，取值于 (R, ℬ(R))。</p>
+                  <h4>已有适配方案</h4>
+                  <table class="note-table">
+                    <thead><tr><th>方法</th><th>来源</th><th>核心思想</th></tr></thead>
+                    <tbody>
+                      <tr><td>EnbPI</td><td>Xu & Xie (2021)</td><td>集成 bootstrap 预测 + 滑动窗口校准</td></tr>
+                      <tr><td>ACI</td><td>Gibbs & Candès (2021)</td><td>自适应调整名义覆盖率的步长</td></tr>
+                      <tr><td>Block CP</td><td>Chernozhukov et al.</td><td>用 block bootstrap 保持时序依赖结构</td></tr>
+                    </tbody>
+                  </table>
 
-            <h4>Lebesgue 积分 vs. Riemann 积分</h4>
-            <ul>
-              <li>Riemann 积分"竖着切"，要求函数足够光滑</li>
-              <li>Lebesgue 积分"横着切"，只需要可测性</li>
-              <li>对概率论：期望就是 Lebesgue 积分，L<sup>1</sup> 可积 = 期望存在</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+                  <h4>对 DY Connectedness 的场景评估</h4>
+                  <ul>
+                    <li>VAR 残差近似鞅差序列，exchangability 的违反程度可能较小</li>
+                    <li>滑动窗口校准（rolling calibration）可能是最实用的方案</li>
+                    <li>关键问题：需要为 <strong>每个</strong> 方向性溢出指数分别构造区间，还是构造联合区间？</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
 
-      <!-- ============================== NOTE 10: DY Spillover ============================== -->
-      <article class="note-card-expandable" id="dy-spillover" data-category="connectedness">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-share-alt"></i></span>
-            <div>
-              <h3>DY 溢出指数框架 — 方法论笔记</h3>
-              <p class="note-card-meta">金融网络 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>框架结构</h4>
-            <p>Diebold & Yilmaz (2012, 2014) 提出基于 VAR 方差分解的溢出指数框架：</p>
-            <ol>
-              <li>拟合 N 变量的 VAR(p) 模型</li>
-              <li>计算广义预测误差方差分解（GFEVD），得到 N×N 矩阵，其中第 (i,j) 元素表示变量 j 对变量 i 的预测误差方差</li>
-              <li>总溢出指数（TSI）= 非对角元素之和 / N</li>
-              <li>方向性溢出指数：From 和 To</li>
-            </ol>
+            <!-- NOTE 7: CP + DY -->
+            <article class="note-card-expandable" id="cp-dy" data-category="conformal">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-project-diagram"></i></span>
+                  <div>
+                    <h3>Conformal Prediction + DY Connectedness 融合方案</h3>
+                    <p class="note-card-meta">研究项目 · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>问题定位</h4>
+                  <p>Diebold-Yilmaz（2012, 2014）溢出指数是金融网络连通性的标准度量，但其统计推断（尤其是置信区间）长期缺乏令人满意的解决方案：</p>
+                  <ul>
+                    <li>传统 Delta 方法依赖泰勒展开，大样本假设过强</li>
+                    <li>bootstrap 方法计算昂贵，且覆盖精度受时序依赖影响</li>
+                  </ul>
 
-            <h4>关键公式</h4>
-            <div class="note-math">
-              <p><strong>方向性溢出（From others to i）：</strong></p>
-              <p><code>C<sub>i←•</sub> = Σ<sub>j≠i</sub> θ<sub>ij</sub> / N</code></p>
-              <p><strong>净溢出（Net from i to others）：</strong></p>
-              <p><code>C<sub>i,net</sub> = C<sub>i→•</sub> - C<sub>•→i</sub></code></p>
-            </div>
+                  <h4>提出的方法</h4>
+                  <p>将 conformal prediction 应用于 DY 溢出指数框架：</p>
+                  <ol>
+                    <li>使用 VAR 模型估计各方向的预测误差方差分解（FEVD）</li>
+                    <li>将溢出指数视为预测误差的函数，构造 convolution score</li>
+                    <li>校准集来自历史的滚动窗口，保证时序一致性</li>
+                    <li>输出每个方向性溢出指数的 (1-α) 水平置信区间</li>
+                  </ol>
 
-            <h4>无向对的连通性度量</h4>
-            <p>对于无向配对（pairwise），净溢出指数可以简化为更有解释力的"连接强度"度量。</p>
-          </div>
-        </div>
-      </article>
+                  <h4>优势</h4>
+                  <ul>
+                    <li>分布无关：不需要 FEVD 的渐近分布假设</li>
+                    <li>有限样本保证：即使样本量小也有效（理论保证）</li>
+                    <li>计算高效：split conformal 只需一次模型估计</li>
+                  </ul>
 
-      <!-- ============================== NOTE 11: BEH 2026 ============================== -->
-      <article class="note-card-expandable" id="beh2026" data-category="connectedness">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-newspaper"></i></span>
-            <div>
-              <h3>Bevilacqua, Ellington & Hizmeri (2026) 精读笔记</h3>
-              <p class="note-card-meta">论文精读 · 2026-09</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>论文概览</h4>
-            <p>BEH (2026) 是 connectedness 研究的前沿成果，本文从方法、数据和实证三个层面系统分析了金融系统的网络连通性。</p>
-
-            <h4>方法论创新</h4>
-            <ul>
-              <li>改进了 DY 框架中的窗口选择问题</li>
-              <li>使用更灵活的波动率模型估计条件方差</li>
-              <li>引入时变参数（TVP）VAR 以捕捉结构性变化</li>
-            </ul>
-
-            <h4>与我的研究的关联</h4>
-            <ul>
-              <li>波动率建模层面：BEH 使用单一波动率模型，State-Weighted 框架有望提供更精细的方案</li>
-              <li>推断层面：BEH 未给出溢出指数的置信区间，CP+DY 方案可以直接补充</li>
-            </ul>
-
-            <h4>值得借鉴的要点</h4>
-            <ul>
-              <li>数据选样的合理性论证</li>
-              <li>稳健性检验（改变窗口长度、H 步预测期选择）</li>
-              <li>结果呈现的可视化方法</li>
-            </ul>
+                  <h4>待解决的问题</h4>
+                  <ul>
+                    <li>如何定义合适的 conformity score（溢出指数的函数形式复杂）</li>
+                    <li>多步预测的累积不确定性如何传播</li>
+                    <li>带宽参数（滚动窗口长度）的选择</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
+      </div>
 
-      <!-- ============================== NOTE 12: FL Overview ============================== -->
-      <article class="note-card-expandable" id="fl-overview" data-category="fl">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-network-wired"></i></span>
-            <div>
-              <h3>联邦学习（FL）方法调研笔记</h3>
-              <p class="note-card-meta">联邦学习 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>FL 的核心范式</h4>
-            <p>联邦学习的核心思想：<strong>数据不动，模型动</strong>。客户端在本地训练模型，只上传模型参数或梯度，原始数据不出域。</p>
+      <!-- ================================================================ -->
+      <!-- 概率论基础 -->
+      <!-- ================================================================ -->
+      <div class="subtopic-section">
+        <h2 class="subtopic-section-title">📐 概率论基础</h2>
 
-            <h4>与时间序列建模的适配</h4>
-            <table class="note-table">
-              <thead><tr><th>方法</th><th>适用场景</th><th>对时序模型的适配性</th></tr></thead>
-              <tbody>
-                <tr><td>FedAvg</td><td>IID 数据</td><td>弱 — 时序数据的非 IID 特征显著</td></tr>
-                <tr><td>FedProx</td><td>异质性数据</td><td>中 — 适合不同机构的异构时序数据</td></tr>
-                <tr><td>PerFedAvg</td><td>个性化需求</td><td>强 — 各机构的波动率模式不同</td></tr>
-              </tbody>
-            </table>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            集合论
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 8: Set Limits -->
+            <article class="note-card-expandable" id="set-limits" data-category="probability">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-infinity"></i></span>
+                  <div>
+                    <h3>Resnick《A Probability Path》— 集合极限 (Set Limits)</h3>
+                    <p class="note-card-meta">概率论 · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>核心概念</h4>
+                  <p>集合极限是测度论的基础。对一列集合 {A<sub>n</sub>}，定义：</p>
+                  <div class="note-math">
+                    <p><strong>上极限（limsup）：</strong></p>
+                    <p><code>limsup A<sub>n</sub> = ∩<sub>n=1</sub><sup>∞</sup> ∪<sub>k=n</sub><sup>∞</sup> A<sub>k</sub> = {ω: ω 出现在无穷多个 A<sub>n</sub> 中}</code></p>
+                    <p><strong>下极限（liminf）：</strong></p>
+                    <p><code>liminf A<sub>n</sub> = ∪<sub>n=1</sub><sup>∞</sup> ∩<sub>k=n</sub><sup>∞</sup> A<sub>k</sub> = {ω: ω 出现在除了有限个之外的所有 A<sub>n</sub> 中}</code></p>
+                  </div>
 
-            <h4>在 GARCH 类模型中的应用</h4>
-            <ul>
-              <li>每个机构（银行/券商）在本地估计 BEKK-GARCH 的参数</li>
-              <li>服务器聚合各机构的参数估计而非原始收益率数据</li>
-              <li>挑战：参数的同质性假设可能不成立</li>
-            </ul>
-          </div>
-        </div>
-      </article>
+                  <h4>直观理解</h4>
+                  <ul>
+                    <li><code>limsup A<sub>n</sub></code> = "无穷多次发生"的事件</li>
+                    <li><code>liminf A<sub>n</sub></code> = "最终一直发生"的事件</li>
+                    <li>显然：liminf A<sub>n</sub> ⊆ limsup A<sub>n</sub></li>
+                    <li>当两者相等时，称集合序列收敛：lim A<sub>n</sub> = limsup A<sub>n</sub> = liminf A<sub>n</sub></li>
+                  </ul>
 
-      <!-- ============================== NOTE 13: FL + BEKK ============================== -->
-      <article class="note-card-expandable" id="fl-bekk" data-category="fl">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-cogs"></i></span>
-            <div>
-              <h3>FL + BEKK-GARCH: 隐私保护波动率建模方案</h3>
-              <p class="note-card-meta">联邦学习 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>方案框架</h4>
-            <ol>
-              <li><strong>本地估计</strong>：每个机构 i 使用本地收益率数据 {r<sub>i,t</sub>} 估计 BEKK 参数 θ̂<sub>i</sub></li>
-              <li><strong>安全聚合</strong>：使用安全多方计算（SMPC）或差分隐私（DP）对参数聚合并添加噪声</li>
-              <li><strong>联合推断</strong>：聚合后的参数用于系统性波动率预测</li>
-            </ol>
-
-            <h4>隐私保护机制</h4>
-            <ul>
-              <li>差分隐私（DP）：在参数上传前注入校准噪声</li>
-              <li>安全聚合（SecAgg）：各机构参数加密后聚合，服务器无法解构单个机构的参数</li>
-              <li>可信执行环境（TEE）：在硬件层面保护聚合过程</li>
-            </ul>
-
-            <h4>精度-隐私权衡</h4>
-            <p>如果 DP 的 ε 参数越小（隐私越强），噪声越大，参数估计的精度损失越严重。需要：</p>
-            <ul>
-              <li>在 Wavelet 域进行 DP（降低噪声对低频成分的影响）</li>
-              <li>使用 correlated DP 替代独立 DP（适配时序结构）</li>
-            </ul>
+                  <h4>与概率论的连接</h4>
+                  <p>Borel-Cantelli 引理：</p>
+                  <ul>
+                    <li><strong>第一引理</strong>：Σ P(A<sub>n</sub>) < ∞ → P(limsup A<sub>n</sub>) = 0</li>
+                    <li><strong>第二引理</strong>：若 A<sub>n</sub> 独立且 Σ P(A<sub>n</sub>) = ∞ → P(limsup A<sub>n</sub>) = 1</li>
+                  </ul>
+                  <p>这是连接集合极限论与概率测度的关键桥梁，也是几乎所有强极限定理的基础。</p>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
 
-      <!-- ============================== NOTE 14: PIPL ============================== -->
-      <article class="note-card-expandable" id="pipl" data-category="fl">
-        <div class="note-card-header" onclick="toggleNote(this)">
-          <div class="note-card-title">
-            <span class="note-card-icon"><i class="fas fa-shield-alt"></i></span>
-            <div>
-              <h3>PIPL 合规框架—个人信息保护法对金融数据共享的约束</h3>
-              <p class="note-card-meta">联邦学习 · 2026-08</p>
-            </div>
-          </div>
-          <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
-        </div>
-        <div class="note-card-body">
-          <div class="note-content">
-            <h4>PIPL 关键条款（对金融数据的影响）</h4>
-            <ul>
-              <li><strong>第 6 条</strong>：最小必要原则 — 只能收集实现目的所需的最少数据</li>
-              <li><strong>第 23 条</strong>：向第三方提供个人信息需单独同意</li>
-              <li><strong>第 38 条</strong>：跨境数据传输需通过安全评估</li>
-              <li><strong>第 69 条</strong>：违规最高可处 5000 万元或上年营收 5% 的罚款</li>
-            </ul>
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            测度论
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 9: Measure Theory -->
+            <article class="note-card-expandable" id="measure-theory" data-category="probability">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-ruler"></i></span>
+                  <div>
+                    <h3>测度论核心概念 — σ-域、可测性与测度</h3>
+                    <p class="note-card-meta">概率论 · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>σ-域（σ-algebra）</h4>
+                  <p>σ-域是"可测集"的集合体系，满足三条公理：</p>
+                  <ul>
+                    <li>Ω ∈ ℱ（全集可测）</li>
+                    <li>若 A ∈ ℱ，则 A<sup>c</sup> ∈ ℱ（余集封闭）</li>
+                    <li>若 {A<sub>n</sub>}<sub>n≥1</sub> ⊆ ℱ，则 ∪A<sub>n</sub> ∈ ℱ（可数并封闭）</li>
+                  </ul>
 
-            <h4>对波动率建模的影响</h4>
-            <p>传统波动率建模需要集中多个机构的收益率数据，这在 PIPL 框架下基本不可行。FL 提供了解决方案：</p>
-            <ul>
-              <li>原始数据不出本地 → 不需要个人信息出境</li>
-              <li>只传递模型参数 → 符合最小必要原则</li>
-              <li>DP 噪声 → 提供数学可验证的隐私保证</li>
-            </ul>
+                  <h4>Borel σ-域 vs. 可测空间</h4>
+                  <p>Borel σ-域 ℬ(R) 是包含 R 上所有开集的最小 σ-域。在金融时间序列中，我们通常假设随机变量定义在 (Ω, ℱ, P) 上，取值于 (R, ℬ(R))。</p>
+
+                  <h4>Lebesgue 积分 vs. Riemann 积分</h4>
+                  <ul>
+                    <li>Riemann 积分"竖着切"，要求函数足够光滑</li>
+                    <li>Lebesgue 积分"横着切"，只需要可测性</li>
+                    <li>对概率论：期望就是 Lebesgue 积分，L<sup>1</sup> 可积 = 期望存在</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
-      </article>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- 金融网络与连通性 -->
+      <!-- ================================================================ -->
+      <div class="subtopic-section">
+        <h2 class="subtopic-section-title">🔗 金融网络与连通性</h2>
+
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            方法论基础
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 10: DY Spillover -->
+            <article class="note-card-expandable" id="dy-spillover" data-category="connectedness">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-share-alt"></i></span>
+                  <div>
+                    <h3>DY 溢出指数框架 — 方法论笔记</h3>
+                    <p class="note-card-meta">金融网络 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>框架结构</h4>
+                  <p>Diebold & Yilmaz (2012, 2014) 提出基于 VAR 方差分解的溢出指数框架：</p>
+                  <ol>
+                    <li>拟合 N 变量的 VAR(p) 模型</li>
+                    <li>计算广义预测误差方差分解（GFEVD），得到 N×N 矩阵，其中第 (i,j) 元素表示变量 j 对变量 i 的预测误差方差</li>
+                    <li>总溢出指数（TSI）= 非对角元素之和 / N</li>
+                    <li>方向性溢出指数：From 和 To</li>
+                  </ol>
+
+                  <h4>关键公式</h4>
+                  <div class="note-math">
+                    <p><strong>方向性溢出（From others to i）：</strong></p>
+                    <p><code>C<sub>i←•</sub> = Σ<sub>j≠i</sub> θ<sub>ij</sub> / N</code></p>
+                    <p><strong>净溢出（Net from i to others）：</strong></p>
+                    <p><code>C<sub>i,net</sub> = C<sub>i→•</sub> - C<sub>•→i</sub></code></p>
+                  </div>
+
+                  <h4>无向对的连通性度量</h4>
+                  <p>对于无向配对（pairwise），净溢出指数可以简化为更有解释力的"连接强度"度量。</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            前沿文献
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 11: BEH 2026 -->
+            <article class="note-card-expandable" id="beh2026" data-category="connectedness">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-newspaper"></i></span>
+                  <div>
+                    <h3>Bevilacqua, Ellington & Hizmeri (2026) 精读笔记</h3>
+                    <p class="note-card-meta">论文精读 · 2026-09</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>论文概览</h4>
+                  <p>BEH (2026) 是 connectedness 研究的前沿成果，本文从方法、数据和实证三个层面系统分析了金融系统的网络连通性。</p>
+
+                  <h4>方法论创新</h4>
+                  <ul>
+                    <li>改进了 DY 框架中的窗口选择问题</li>
+                    <li>使用更灵活的波动率模型估计条件方差</li>
+                    <li>引入时变参数（TVP）VAR 以捕捉结构性变化</li>
+                  </ul>
+
+                  <h4>与我的研究的关联</h4>
+                  <ul>
+                    <li>波动率建模层面：BEH 使用单一波动率模型，State-Weighted 框架有望提供更精细的方案</li>
+                    <li>推断层面：BEH 未给出溢出指数的置信区间，CP+DY 方案可以直接补充</li>
+                  </ul>
+
+                  <h4>值得借鉴的要点</h4>
+                  <ul>
+                    <li>数据选样的合理性论证</li>
+                    <li>稳健性检验（改变窗口长度、H 步预测期选择）</li>
+                    <li>结果呈现的可视化方法</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================================================================ -->
+      <!-- 联邦学习与隐私计量 -->
+      <!-- ================================================================ -->
+      <div class="subtopic-section">
+        <h2 class="subtopic-section-title">🔒 联邦学习与隐私计量</h2>
+
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            FL 方法论
+            <span class="subtopic-count">2 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 12: FL Overview -->
+            <article class="note-card-expandable" id="fl-overview" data-category="fl">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-network-wired"></i></span>
+                  <div>
+                    <h3>联邦学习（FL）方法调研笔记</h3>
+                    <p class="note-card-meta">联邦学习 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>FL 的核心范式</h4>
+                  <p>联邦学习的核心思想：<strong>数据不动，模型动</strong>。客户端在本地训练模型，只上传模型参数或梯度，原始数据不出域。</p>
+
+                  <h4>与时间序列建模的适配</h4>
+                  <table class="note-table">
+                    <thead><tr><th>方法</th><th>适用场景</th><th>对时序模型的适配性</th></tr></thead>
+                    <tbody>
+                      <tr><td>FedAvg</td><td>IID 数据</td><td>弱 — 时序数据的非 IID 特征显著</td></tr>
+                      <tr><td>FedProx</td><td>异质性数据</td><td>中 — 适合不同机构的异构时序数据</td></tr>
+                      <tr><td>PerFedAvg</td><td>个性化需求</td><td>强 — 各机构的波动率模式不同</td></tr>
+                    </tbody>
+                  </table>
+
+                  <h4>在 GARCH 类模型中的应用</h4>
+                  <ul>
+                    <li>每个机构（银行/券商）在本地估计 BEKK-GARCH 的参数</li>
+                    <li>服务器聚合各机构的参数估计而非原始收益率数据</li>
+                    <li>挑战：参数的同质性假设可能不成立</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- NOTE 13: FL + BEKK -->
+            <article class="note-card-expandable" id="fl-bekk" data-category="fl">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-cogs"></i></span>
+                  <div>
+                    <h3>FL + BEKK-GARCH: 隐私保护波动率建模方案</h3>
+                    <p class="note-card-meta">联邦学习 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>方案框架</h4>
+                  <ol>
+                    <li><strong>本地估计</strong>：每个机构 i 使用本地收益率数据 {r<sub>i,t</sub>} 估计 BEKK 参数 θ̂<sub>i</sub></li>
+                    <li><strong>安全聚合</strong>：使用安全多方计算（SMPC）或差分隐私（DP）对参数聚合并添加噪声</li>
+                    <li><strong>联合推断</strong>：聚合后的参数用于系统性波动率预测</li>
+                  </ol>
+
+                  <h4>隐私保护机制</h4>
+                  <ul>
+                    <li>差分隐私（DP）：在参数上传前注入校准噪声</li>
+                    <li>安全聚合（SecAgg）：各机构参数加密后聚合，服务器无法解构单个机构的参数</li>
+                    <li>可信执行环境（TEE）：在硬件层面保护聚合过程</li>
+                  </ul>
+
+                  <h4>精度-隐私权衡</h4>
+                  <p>如果 DP 的 ε 参数越小（隐私越强），噪声越大，参数估计的精度损失越严重。需要：</p>
+                  <ul>
+                    <li>在 Wavelet 域进行 DP（降低噪声对低频成分的影响）</li>
+                    <li>使用 correlated DP 替代独立 DP（适配时序结构）</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="subtopic-group">
+          <h3 class="subtopic-group-header" onclick="toggleSubtopicSection(this)">
+            <span class="subtopic-group-icon"><i class="fas fa-chevron-right"></i></span>
+            合规相关
+            <span class="subtopic-count">1 篇</span>
+          </h3>
+          <div class="subtopic-group-body">
+            <!-- NOTE 14: PIPL -->
+            <article class="note-card-expandable" id="pipl" data-category="fl">
+              <div class="note-card-header" onclick="toggleNote(this)">
+                <div class="note-card-title">
+                  <span class="note-card-icon"><i class="fas fa-shield-alt"></i></span>
+                  <div>
+                    <h3>PIPL 合规框架—个人信息保护法对金融数据共享的约束</h3>
+                    <p class="note-card-meta">联邦学习 · 2026-08</p>
+                  </div>
+                </div>
+                <span class="note-toggle-icon"><i class="fas fa-chevron-down"></i></span>
+              </div>
+              <div class="note-card-body">
+                <div class="note-content">
+                  <h4>PIPL 关键条款（对金融数据的影响）</h4>
+                  <ul>
+                    <li><strong>第 6 条</strong>：最小必要原则 — 只能收集实现目的所需的最少数据</li>
+                    <li><strong>第 23 条</strong>：向第三方提供个人信息需单独同意</li>
+                    <li><strong>第 38 条</strong>：跨境数据传输需通过安全评估</li>
+                    <li><strong>第 69 条</strong>：违规最高可处 5000 万元或上年营收 5% 的罚款</li>
+                  </ul>
+
+                  <h4>对波动率建模的影响</h4>
+                  <p>传统波动率建模需要集中多个机构的收益率数据，这在 PIPL 框架下基本不可行。FL 提供了解决方案：</p>
+                  <ul>
+                    <li>原始数据不出本地 → 不需要个人信息出境</li>
+                    <li>只传递模型参数 → 符合最小必要原则</li>
+                    <li>DP 噪声 → 提供数学可验证的隐私保证</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
 
     </main>
   </div>

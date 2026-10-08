@@ -118,7 +118,6 @@ function toggleNote(headerEl) {
   const body = card.querySelector('.note-card-body');
   const isOpen = body.classList.contains('open');
 
-  // Toggle this card
   body.classList.toggle('open');
   headerEl.classList.toggle('open');
 
@@ -132,18 +131,41 @@ function toggleNote(headerEl) {
 }
 
 /**
+ * Toggle a subtopic group's expand/collapse state in the main content area.
+ * Called from HTML onclick on the subtopic group header.
+ */
+function toggleSubtopicSection(headerEl) {
+  headerEl.classList.toggle('open');
+  const body = headerEl.nextElementSibling;
+  if (body && body.classList.contains('subtopic-group-body')) {
+    body.classList.toggle('open');
+  }
+}
+
+/**
  * Open a specific note card from sidebar click.
  */
 function openNoteFromSidebar(noteId) {
   const card = document.getElementById(noteId);
   if (!card) return;
 
+  // Expand the note card itself
   const body = card.querySelector('.note-card-body');
   const header = card.querySelector('.note-card-header');
-
   if (!body.classList.contains('open')) {
     body.classList.add('open');
     header.classList.add('open');
+  }
+
+  // Expand parent subtopic group
+  const parentGroup = card.closest('.subtopic-group');
+  if (parentGroup) {
+    const groupHeader = parentGroup.querySelector('.subtopic-group-header');
+    const groupBody = parentGroup.querySelector('.subtopic-group-body');
+    if (groupHeader && !groupHeader.classList.contains('open')) {
+      groupHeader.classList.add('open');
+      if (groupBody) groupBody.classList.add('open');
+    }
   }
 
   // Scroll to the card
@@ -155,8 +177,8 @@ function openNoteFromSidebar(noteId) {
 // ==================== DOCUMENT READY: Notebook Initialization ====================
 document.addEventListener('DOMContentLoaded', function() {
 
-  // --- Sidebar category toggles ---
-  document.querySelectorAll('.toc-toggle, .toc-label[data-target]').forEach(el => {
+  // --- Sidebar toggles: category (level 1) + subtopic (level 2) ---
+  document.querySelectorAll('.toc-toggle[data-target], .toc-label[data-target], .toc-subtopic-label[data-target]').forEach(el => {
     el.addEventListener('click', function(e) {
       const targetId = this.dataset.target;
       if (!targetId) return;
@@ -164,11 +186,15 @@ document.addEventListener('DOMContentLoaded', function() {
       if (!children) return;
 
       children.classList.toggle('open');
-      this.closest('.toc-category')?.querySelector('.toc-toggle')?.classList.toggle('open');
+
+      // Rotate the toggle icon within the same toc-item
+      const item = this.closest('.toc-item');
+      const toggleIcon = item?.querySelector(':scope > .toc-toggle');
+      if (toggleIcon) toggleIcon.classList.toggle('open');
     });
   });
 
-  // --- Sidebar leaf click -> open note + set active ---
+  // --- Sidebar leaf click -> open note + set active + expand subtopic ---
   document.querySelectorAll('.toc-leaf a').forEach(link => {
     link.addEventListener('click', function(e) {
       e.preventDefault();
@@ -195,18 +221,18 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelectorAll('.toc-leaf').forEach(el => el.classList.remove('active-leaf'));
       leaf.classList.add('active-leaf');
 
-      // Open parent categories
+      // Open all parent levels in sidebar: category + subtopic
       let parent = leaf.closest('.toc-children');
       while (parent) {
         parent.classList.add('open');
-        const toggle = parent.closest('.toc-item')?.querySelector('.toc-toggle');
+        const toggle = parent.closest('.toc-item')?.querySelector(':scope > .toc-toggle');
         if (toggle) toggle.classList.add('open');
         parent = parent.parentElement?.closest('.toc-children');
       }
     }
   }
 
-  // --- Mobile sidebar toggle (optional: sidebar header click) ---
+  // --- Mobile sidebar toggle ---
   const sidebarHeader = document.querySelector('.sidebar-header');
   const sidebarToc = document.getElementById('sidebarToc');
   if (sidebarHeader && sidebarToc && window.innerWidth <= 768) {
@@ -216,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  // --- Reveal animation for new note cards ---
+  // --- Reveal animation for note cards ---
   const noteCards = document.querySelectorAll('.note-card-expandable');
   if (noteCards.length) {
     const observer = new IntersectionObserver((entries) => {
